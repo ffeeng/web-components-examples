@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>:defined demo</title>
+    <script src="main.js" defer></script>
+    <style>
+      p {
+        background: yellow;
+      }
+
+      simple-custom {
+        background: cyan;
+      }
+
+      :defined {
+        font-style: italic;
+      }
+
+      simple-custom:not(:defined) {
+        display: none;
+      }
+
+      simple-custom:defined {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="white-space: pre-line">
+      :defined {
+        font-style: italic;
+      }
+      :defined对h5元素起作用是伪类选择器
+      自定义的元素会继承:defined
+    </div>
+    <h1><code>:defined</code> demo</h1>
+
+    <simple-custom text="Custom element example text"></simple-custom>
+
+    <p>Standard paragraph example text</p>
+
+  </body>
+</html>
